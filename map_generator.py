@@ -28,7 +28,7 @@ def check_pygame_enabled(func):
     return wrapper
 
 
-class MAPD:
+class MG:
     def __init__(self, args):
         self.args = args
         # initialize and prepare screen
@@ -56,7 +56,7 @@ class MAPD:
         self.fpsClock = pygame.time.Clock()
         # self.fpsClock.tick(10)
         self.fpsClock.tick(1)
-        pygame.display.set_caption('MAPD')
+        pygame.display.set_caption('MG')
         # screen.fill(white)
         ################################################################################
         # text

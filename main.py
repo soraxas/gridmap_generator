@@ -32,11 +32,11 @@ import os
 
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '' # hide pygame prompt
 
-from map_generator import MAPD
+from map_generator import MG
 
 LOGGER = logging.getLogger()
 def main():
-    args = docopt(__doc__, version='MAPD Research v1.0')
+    args = docopt(__doc__)
     if args['<OUTPUT_FILE>'] is None:
         args['<OUTPUT_FILE>'] = "./generated_map.map"
 
@@ -56,11 +56,11 @@ def main():
 
     LOGGER.debug("commandline args: {}".format(args))
 
-    mapd = MAPD(args)
-    return mapd
+    map_generator = MG(args)
+    return map_generator
 
 
 if __name__ == '__main__':
     # run if run from commandline
-    mapd = main()
-    mapd.run()
+    map_generator = main()
+    map_generator.run()
